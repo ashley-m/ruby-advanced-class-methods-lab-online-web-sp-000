@@ -50,6 +50,8 @@ class Song
   def self.new_from_filename(fname)
     chars = fname.split(/[-.]/)
     #binding.pry
-    create_by_name(chars[1].strip).artist_name = chars[0].strip
+    song = create_by_name(chars[1].strip)
+    song.artist_name = chars[0].strip
+    return song
   end
 end
