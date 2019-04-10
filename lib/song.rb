@@ -49,5 +49,6 @@ class Song
 
   def self.new_from_filename(fname)
     chars = fname.scan(/[ - ][.]/)
+    binding.pry
   end
 end
