@@ -54,4 +54,13 @@ class Song
     song.artist_name = chars[0].strip
     return song
   end
+
+  def self.create_from_filename(fname)
+    chars = fname.split(/[-.]/)
+    #binding.pry
+    song = create_by_name(chars[1].strip)
+    song.artist_name = chars[0].strip
+    @@all << song
+    return song
+  end
 end
